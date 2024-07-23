@@ -1,13 +1,7 @@
-class Solution {
+import java.util.Arrays;
+
+public class Solution {
     public double solution(int[] arr) {
-        double answer = 0;
-        
-        for(int a : arr){
-            answer += a;
-        }
-        
-        answer = answer/arr.length; 
-        
-        return answer;
+        return Arrays.stream(arr).average().orElse(0.0);
     }
 }
